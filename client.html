@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Bancaire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { padding: 20px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Convertisseur de devises</h1>
+    <div id="resultContainer"></div>
+
+    <div class="card mb-4">
+        <div class="card-header">Euro to TND</div>
+        <div class="card-body">
+            <form id="euroToTndForm">
+                <div class="form-group">
+                    <label for="amountEuro">Montant en Euros :</label>
+                    <input type="number" class="form-control" name="amount" id="amountEuro" step="0.01" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Convertir Euro à TND</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">TND to Other Currencies</div>
+        <div class="card-body">
+            <form id="tndToAnyForm">
+                <div class="form-group">
+                    <label for="amountTnd">Montant en TND :</label>
+                    <input type="number" class="form-control" name="amount" id="amountTnd" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="currency">Choisissez une devise :</label>
+                    <select class="form-control" name="currency" id="currency" required>
+                        <option value="">Select Currency</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Convertir TND à autre devise</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
